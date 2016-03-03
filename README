@@ -25,16 +25,4 @@ Procedure:
 	python vec2CF.py
 	This generates the file trainInput.txt which is a input to the 	classifier for training.
 
-MATLAB:
-
-load trainInput.txt
-load tags.txt
-load testdata.txt
-svmStruct = svmtrain(trainInput,tags);
-output = svmclassify(svmStruct,testdata) #for single song 
-if output =1 happy song else sad song
-           (or)
-output = svmclassify(svmStruct,trainInput)  #for entire training Data
-To find accuracy:
-	sum(output==tags)/length(tags) 
 
